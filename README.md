@@ -1,98 +1,35 @@
-# 🇰🇷 Awesome Korea
+# 🇰🇷 DiscoverKR
 
-<!-- ! 플레이스토어 링크, 스크린샷 -->
+> Explore Beautiful Korea — discover must-visit places and plan your own trip.
 
-## 📌 Main Features
+DiscoverKR is an iOS travel app for exploring Korea Tourism Organization (KTO)
+recommended attractions on a map and in cards. **On-device AI (Apple Foundation
+Models)** generates a travel guide for each place in real time.
 
--
+## ✨ Main Features
 
-## 👉 Pod library
+- 🗺️ **Map & List browsing** — explore attractions nationwide with MapKit
+- 🤖 **AI travel guide** — on-device AI generates an overview, highlights, and tips for each place (gracefully falls back to base info on unsupported devices)
+- ❤️ **Favorites** — save the places you love
+- 🧳 **Trip Planner** — collect places into your own itinerary
+- 🌐 **Travel Info** — quick links to KTO official English pages (attractions, transportation, accommodation, food, shopping)
 
-> Google-Mobile-Ads-SDK - https://cocoapods.org/pods/Google-Mobile-Ads-SDK
+## 🛠 Tech Stack
 
-#### 설치
+- SwiftUI (iOS 26+)
+- MapKit
+- FoundationModels (on-device AI)
+- Google Mobile Ads SDK (AdMob)
 
-`pod init`
+## 🚀 Getting Started
 
-```ruby
-  pod 'Google-Mobile-Ads-SDK'
+```bash
+pod install
+open discoverKR.xcworkspace
 ```
 
-`pod install`
-
-<!-- ## 📌 Project Setup -->
-
-## 🔑 Check Point !
-
-### 🔷 UI Structure
-
-<!-- ! ppt UI structure -->
-
-### 🔷 Model
-
-```swift
-
-```
-
-### 🔷 Check core codes in details
-
-#### 👉 [1.Create ViewModel with StateObject and EnvironmentObject]()
-
-#### 👉 [2.Apply MapKit]()
-
-#### 👉 [3.Drop-down menu List]()
-
-#### 👉 [4.Preview View for locations]()
-
-#### 👉 [5.Custom Map Pins]()
-
-#### 👉 [6.Location Detail View]()
-
-#### 👉 [7.iPad, DarkMode, Landscape]()
-
-### 🔷 Version Log
-
-- V.1.0.1
-
-  - button category bug fixed
-
-  - AdMob banner location changed
-
-  - Optimizing App to decrease total of size
-
-<!-- #### 👉 -->
-
-<!-- > Describing check point in details in Jacob's DevLog - https://jacobko.info/firebaseios/ios-firebase-03/ -->
-
-<!-- ## ❌ Error Check Point
-
-### 🔶 -->
-
-<!-- xcode Mark template -->
-
-<!--
-// MARK: IBOutlet
-// MARK: LifeCycle
-// MARK: Actions
-// MARK: Methods
-// MARK: Extensions
--->
-
-<!-- <img height="350" alt="스크린샷" src=""> -->
-
-<!-- README 한 줄에 여러 screenshoot 놓기 예제 -->
-<!-- <p>
-    <img alt="Clear Spaces demo" src="../assets/demo-clear-spaces.gif" height=400px>
-    <img alt="QR code scanner demo" src="../assets/demo-qr-code.gif" height=400px>
-    <img alt="Example preview demo" src="../assets/demo-example.gif" height=400px>
-</p> -->
-
----
-
-<!-- 🔶 🔷 📌 🔑 👉 -->
+> `Pods/` is excluded from the repo, so run `pod install` after cloning.
 
 ## 🗃 Reference
 
-SwiftUI App Tutorial with MVVM and MapKit - [https://youtu.be/Jhf3CNs8I-I](https://youtu.be/Jhf3CNs8I-I)
-
-100 MUST-VISIT TOURIST SPOTS IN KOREA - [http://english.visitkorea.or.kr/enu/TRV/TV_ENG_Must100.jsp#](http://english.visitkorea.or.kr/enu/TRV/TV_ENG_Must100.jsp#)
+- 100 Must-Visit Tourist Spots in Korea — [VisitKorea](https://english.visitkorea.or.kr/svc/contents/infoHtmlView.do?vcontsId=145437)
