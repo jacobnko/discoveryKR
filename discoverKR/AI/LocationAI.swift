@@ -13,8 +13,9 @@ import FoundationModels
 // MARK: -  GENERATED OUTPUT
 
 /// Structured AI output generated from a `Location`'s existing JSON fields.
+/// `Codable` so guides can be persisted to disk and reused across launches.
 @Generable
-struct AILocationGuide {
+struct AILocationGuide: Codable {
 	@Guide(description: "An engaging 2 to 3 sentence overview that makes an international traveler excited to visit. Warm, vivid, factual.")
 	var overview: String
 
@@ -34,9 +35,16 @@ struct AILocationGuide {
 @MainActor
 final class LocationAIService {
 	static let shared = LocationAIService()
-	private init() {}
+	private init() { loadDiskCache() }
 
 	private var cache: [String: AILocationGuide] = [:]
+
+	/// Bump to invalidate all persisted guides (e.g. when the prompt changes).
+	private let cacheVersion = 1
+	private var cacheFileURL: URL {
+		let dir = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
+		return dir.appendingPathComponent("ai_guides_v\(cacheVersion).json")
+	}
 
 	/// Whether the on-device model can run on this device right now.
 	var isAvailable: Bool {
@@ -70,7 +78,22 @@ final class LocationAIService {
 
 		let response = try await session.respond(to: prompt, generating: AILocationGuide.self)
 		cache[location.id] = response.content
+		saveDiskCache()
 		return response.content
+	}
+
+	// MARK: Disk persistence
+
+	private func loadDiskCache() {
+		guard let data = try? Data(contentsOf: cacheFileURL),
+			  let decoded = try? JSONDecoder().decode([String: AILocationGuide].self, from: data)
+		else { return }
+		cache = decoded
+	}
+
+	private func saveDiskCache() {
+		guard let data = try? JSONEncoder().encode(cache) else { return }
+		try? data.write(to: cacheFileURL, options: .atomic)
 	}
 }
 
@@ -99,13 +122,15 @@ final class LocationGuideViewModel: ObservableObject {
 		// Don't regenerate if we already have content for this view.
 		if case .ready = state { return }
 
-		guard LocationAIService.shared.isAvailable else {
-			state = .unavailable
+		// 1. Cached guide (memory or disk) → show instantly, even offline.
+		if let cached = LocationAIService.shared.cachedGuide(for: location.id) {
+			state = .ready(cached)
 			return
 		}
 
-		if let cached = LocationAIService.shared.cachedGuide(for: location.id) {
-			state = .ready(cached)
+		// 2. No cache → we need the on-device model.
+		guard LocationAIService.shared.isAvailable else {
+			state = .unavailable
 			return
 		}
 
