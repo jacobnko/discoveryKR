@@ -106,14 +106,14 @@ extension ContentView {
 				.padding(.horizontal)
 				.background(.ultraThinMaterial)
 			} //: SCROLL
-			.onChange(of: vm.currentTab, perform: { _ in
+			.onChange(of: vm.currentTab) {
 				// Enabling scrolling..
 				if vm.currentTab.contains(" SCROLL") {
 					withAnimation(.easeInOut) {
 						proxy.scrollTo(vm.currentTab.replacingOccurrences(of: " SCROLL", with: ""), anchor: .topTrailing)
 					}
 				}
-			})
+			}
 			.background(scheme == .dark ? Color.black : Color.white)
 			.overlay(
 				Divider()
@@ -143,7 +143,7 @@ extension ContentView {
 					
 				} //: VSTACK
 				.padding([.bottom])
-				.onChange(of: vm.currentTab) { newValue in
+				.onChange(of: vm.currentTab) {
 					// avoid scroll if its tap..
 					if vm.currentTab.contains(" TAP") {
 						// Scrolling to content..
@@ -321,7 +321,7 @@ struct LocationCardView: View {
 					} //: VSTACK
 					.hLeading()
 				} //: HSTACK
-				.frame(width: UIScreen.main.bounds.width * 0.9)
+				.frame(width: getReact().width * 0.9)
 				.background(.ultraThickMaterial)
 				.cornerRadius(10)
 				.shadow(color: Color.black.opacity(0.2), radius: 5, x: 5, y: 5)

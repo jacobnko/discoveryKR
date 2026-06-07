@@ -38,7 +38,7 @@ struct NewPlanSheet: View {
 
 				Section("Dates") {
 					DatePicker("Start", selection: $startDate, displayedComponents: .date)
-						.onChange(of: startDate) { newVal in
+						.onChange(of: startDate) { _, newVal in
 							if endDate < newVal { endDate = newVal }
 						}
 					DatePicker("End", selection: $endDate, in: startDate..., displayedComponents: .date)

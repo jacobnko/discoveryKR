@@ -63,7 +63,7 @@ extension MoreDetailView {
 			TabView {
 				ForEach(location.imageNames, id: \.self) { imageName in
 					RemoteImage(urlString: imageName, contentMode: .fill)
-						.frame(width: UIScreen.main.bounds.width, height: 360)
+						.frame(width: getReact().width, height: 360)
 						.clipped()
 				}
 			}
@@ -455,12 +455,9 @@ extension MoreDetailView {
 	}
 
 	private func openInMaps() {
-		let placemark = MKPlacemark(coordinate: location.coordinates)
-		let mapItem = MKMapItem(placemark: placemark)
-		mapItem.name = location.name
-		mapItem.openInMaps(launchOptions: [
-			MKLaunchOptionsMapTypeKey: NSNumber(value: MKMapType.standard.rawValue)
-		])
+		let q = location.name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+		guard let url = URL(string: "http://maps.apple.com/?ll=\(location.latitude),\(location.longitude)&q=\(q)") else { return }
+		UIApplication.shared.open(url)
 	}
 }
 

@@ -16,7 +16,7 @@ struct BannerAd: View {
 	let unitID: String
 
 	private var adSize: GADAdSize {
-		GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width)
+		GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(getReact().width)
 	}
 
 	var body: some View {

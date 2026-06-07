@@ -35,7 +35,8 @@ extension View {
 	
 	// MARK: -  Responsive Size
 	func getReact() -> CGRect {
-		return UIScreen.main.bounds
+		(UIApplication.shared.connectedScenes.first as? UIWindowScene)?.screen.bounds
+			?? CGRect(x: 0, y: 0, width: 390, height: 844)
 	}
 	
 	// MARK: -  Get safeArea
