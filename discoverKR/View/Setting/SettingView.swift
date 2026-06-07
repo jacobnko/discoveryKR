@@ -60,6 +60,7 @@ struct SettingView: View {
 							.font(.title2)
 							.foregroundColor(Color("AppPurple"))
 					}
+					.accessibilityLabel("Close")
 				}
 			}
 		} //: NAVIGATION

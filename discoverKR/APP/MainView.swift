@@ -6,15 +6,12 @@
 //
 
 import SwiftUI
-import GoogleMobileAds
 
 struct MainView: View {
 	// MARK: -  PROPERTY
 	@EnvironmentObject private var vm: MapViewModel
-	init() {
-		GADMobileAds.sharedInstance().start(completionHandler: nil)
-	}
-	
+	// AdMob SDK는 DiscoverKRApp.init에서 한 번만 start (중복 호출 제거)
+
 	// MARK: -  BODY
 	var body: some View {
 		ZStack {

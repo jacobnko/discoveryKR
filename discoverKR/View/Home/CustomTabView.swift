@@ -28,7 +28,10 @@ struct CustomTabView: View {
 					Image(systemName: "line.3.horizontal.decrease")
 						.font(.title2.bold())
 						.foregroundColor(.primary)
+						.frame(width: 44, height: 44)
+						.contentShape(Rectangle())
 				}
+				.accessibilityLabel("Open menu")
 				// Hiding when Menu is Visible..
 				.opacity(showMenu ? 0 : 1)
 				Spacer()
@@ -43,8 +46,10 @@ struct CustomTabView: View {
 						Image(systemName: vm.showFavoritesOnly ? "heart.fill" : "heart")
 							.font(.title3.bold())
 							.foregroundColor(vm.showFavoritesOnly ? Color("AppPurple") : .primary)
+							.frame(width: 44, height: 44)
+							.contentShape(Rectangle())
 					}
-					.padding(.trailing, 6)
+					.accessibilityLabel(vm.showFavoritesOnly ? "Show all places" : "Show favorites only")
 				}
 
 				// Show App Info Sheet
@@ -54,7 +59,10 @@ struct CustomTabView: View {
 					Image(systemName: "info.circle")
 						.font(.title3.bold())
 						.foregroundColor(.primary)
+						.frame(width: 44, height: 44)
+						.contentShape(Rectangle())
 				}
+				.accessibilityLabel("App information")
 
 			} //: HSTACK
 			.overlay(
@@ -116,7 +124,10 @@ struct CustomTabView: View {
 				Image(systemName: "xmark")
 					.font(.title.bold())
 					.foregroundColor(.primary)
+					.frame(width: 44, height: 44)
+					.contentShape(Rectangle())
 			}
+			.accessibilityLabel("Close menu")
 			// Hiding when Menu is Visible..
 			.opacity(showMenu ? 1 : 0)
 				.padding()

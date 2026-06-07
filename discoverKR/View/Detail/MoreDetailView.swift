@@ -289,6 +289,7 @@ extension MoreDetailView {
 					.clipShape(Capsule())
 					.shadow(color: .black.opacity(0.25), radius: 5, x: 0, y: 3)
 				}
+				.accessibilityLabel("Get directions in Maps")
 				.padding(12)
 			}
 			.clipShape(RoundedRectangle(cornerRadius: 16))
@@ -374,6 +375,7 @@ extension MoreDetailView {
 			Image(systemName: "chevron.left")
 				.floatingIcon()
 		}
+		.accessibilityLabel("Close")
 		.padding(.leading, 16)
 		.padding(.top, 8)
 	}
@@ -468,7 +470,7 @@ private extension View {
 		self
 			.font(.headline)
 			.foregroundColor(Color("AppPurple"))
-			.frame(width: 42, height: 42)
+			.frame(width: 44, height: 44)
 			.background(.thinMaterial)
 			.clipShape(Circle())
 			.shadow(color: .black.opacity(0.15), radius: 5, x: 0, y: 2)

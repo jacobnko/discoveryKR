@@ -9,30 +9,51 @@
 import SwiftUI
 import GoogleMobileAds
 
-struct BannerAd: UIViewRepresentable, View {
-	
-	var unitID: String
-	
+/// SwiftUI banner ad that uses an **adaptive anchored** size (fills the device
+/// width) and keeps vertical breathing room so it never sits flush against
+/// tappable content (AdMob accidental-click policy).
+struct BannerAd: View {
+	let unitID: String
+
+	private var adSize: GADAdSize {
+		GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width)
+	}
+
+	var body: some View {
+		BannerAdRepresentable(unitID: unitID, adSize: adSize)
+			.frame(height: adSize.size.height)
+			.frame(maxWidth: .infinity)
+			.padding(.vertical, 8) // separation from tappable content
+			.accessibilityLabel("Advertisement")
+	}
+}
+
+// MARK: - UIViewRepresentable
+private struct BannerAdRepresentable: UIViewRepresentable {
+
+	let unitID: String
+	let adSize: GADAdSize
+
 	func makeCoordinator() -> Coordinator {
 		// For Implementing Delegates..
 		return Coordinator()
 	}
-	
-	func makeUIView(context: Context) -> GADBannerView{
-		let adView = GADBannerView(adSize: GADAdSizeBanner)
-		
+
+	func makeUIView(context: Context) -> GADBannerView {
+		let adView = GADBannerView(adSize: adSize)
+
 		adView.adUnitID = unitID
 		adView.rootViewController = UIApplication.shared.getRootViewController()
 		adView.delegate = context.coordinator
 		adView.load(GADRequest())
-		
+
 		return adView
 	}
-	
+
 	func updateUIView(_ uiView: GADBannerView, context: Context) {
-		
+
 	}
-	
+
 	class Coordinator: NSObject, GADBannerViewDelegate {
 		
 	

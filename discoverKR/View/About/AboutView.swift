@@ -22,8 +22,6 @@ struct AboutView: View {
 		NavigationStack {
 			ScrollView(.vertical, showsIndicators: false) {
 				VStack(spacing: 40) {
-					BannerAd(unitID: AdMobConfig.bannerUnitID)
-
 					ForEach(links, id: \.url) { item in
 						NavigationLink(destination:
 							WebViewTemplate(urlToLoad: item.url)
