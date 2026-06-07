@@ -195,11 +195,9 @@ extension ContentView {
 					.padding(.top, 80)
 				} else {
 					ForEach(vm.searchResults) { location in
-						Button {
-							vm.sheetLocation = location
-						} label: {
-							locationRowView(location: location)
-						}
+						locationRowView(location: location)
+							.contentShape(Rectangle())
+							.onTapGesture { vm.sheetLocation = location }
 					}
 				}
 			}
@@ -226,11 +224,9 @@ extension ContentView {
 					.padding(.top, 80)
 				} else {
 					ForEach(vm.favoriteLocations) { location in
-						Button {
-							vm.sheetLocation = location
-						} label: {
-							locationRowView(location: location)
-						}
+						locationRowView(location: location)
+							.contentShape(Rectangle())
+							.onTapGesture { vm.sheetLocation = location }
 					}
 				}
 			}
@@ -259,7 +255,8 @@ extension ContentView {
 			}
 			Spacer()
 			FavoriteButton(location: location)
-				.padding(.trailing, 4)
+				.padding(.leading, 8)
+				.padding(.trailing, 10)
 		}
 		.padding(12)
 		.frame(maxWidth: .infinity)
@@ -296,41 +293,40 @@ struct LocationCardView: View {
 				.padding([.horizontal, .top])
 			
 			ForEach(tab.locations) { location in
-				Button {
-					vm.sheetLocation = location
-				} label: {
-					HStack(alignment: .center, spacing: 16) {
-						
-						RemoteImage(urlString: location.imageNames[0], cornerRadius: 12)
-							.frame(width: 80, height: 80)
-							.clipped()
-							.padding(10)
-						
-						VStack(alignment: .leading, spacing: 8) {
-							HStack {
-								Text(location.name)
-									.font(.title2)
-									.fontWeight(.bold)
-									.foregroundColor(Color("AppPurple"))
-								Spacer()
-								FavoriteButton(location: location)
-									.padding(.trailing, 5)
-							} //: HSTACK
-							
-							Text(location.headline)
-								.font(.footnote)
-								.foregroundColor(.primary)
-								.multilineTextAlignment(.leading)
-								.lineLimit(2)
-								.padding(.trailing, 8)
-						} //: VSTACK
-						.hLeading()
-					} //: HSTACK
-					.frame(width: UIScreen.main.bounds.width * 0.9)
-					.background(.ultraThickMaterial)
-					.cornerRadius(10)
-					.shadow(color: Color.black.opacity(0.2), radius: 5, x: 5, y: 5)
-				}
+				HStack(alignment: .center, spacing: 16) {
+
+					RemoteImage(urlString: location.imageNames[0], cornerRadius: 12)
+						.frame(width: 80, height: 80)
+						.clipped()
+						.padding(10)
+
+					VStack(alignment: .leading, spacing: 8) {
+						HStack {
+							Text(location.name)
+								.font(.title2)
+								.fontWeight(.bold)
+								.foregroundColor(Color("AppPurple"))
+							Spacer()
+							FavoriteButton(location: location)
+								.padding(.leading, 8)
+								.padding(.trailing, 12)
+						} //: HSTACK
+
+						Text(location.headline)
+							.font(.footnote)
+							.foregroundColor(.primary)
+							.multilineTextAlignment(.leading)
+							.lineLimit(2)
+							.padding(.trailing, 8)
+					} //: VSTACK
+					.hLeading()
+				} //: HSTACK
+				.frame(width: UIScreen.main.bounds.width * 0.9)
+				.background(.ultraThickMaterial)
+				.cornerRadius(10)
+				.shadow(color: Color.black.opacity(0.2), radius: 5, x: 5, y: 5)
+				.contentShape(Rectangle())
+				.onTapGesture { vm.sheetLocation = location }
 			} //: LOOP
 		} //: VSTACK
 		.modifier(OffsetModifier(tab: tab, currentTab: $currentTab))
