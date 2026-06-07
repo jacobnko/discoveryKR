@@ -20,11 +20,16 @@ struct BannerAd: View {
 	}
 
 	var body: some View {
-		BannerAdRepresentable(unitID: unitID, adSize: adSize)
-			.frame(height: adSize.size.height)
-			.frame(maxWidth: .infinity)
-			.padding(.vertical, 8) // separation from tappable content
-			.accessibilityLabel("Advertisement")
+		if AdMobConfig.adsHidden {
+			// 스크린샷 모드: 배너 영역 자체를 숨김
+			Color.clear.frame(height: 0)
+		} else {
+			BannerAdRepresentable(unitID: unitID, adSize: adSize)
+				.frame(height: adSize.size.height)
+				.frame(maxWidth: .infinity)
+				.padding(.vertical, 8) // separation from tappable content
+				.accessibilityLabel("Advertisement")
+		}
 	}
 }
 

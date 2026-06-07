@@ -2,6 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<!-- 표준 HTTPS만 사용 → 암호화 수출 규정 면제 (업로드 시 질문 생략) -->
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<!-- DiscoverKR 실제 AdMob App ID -->
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-8787171365157933~3252576807</string>

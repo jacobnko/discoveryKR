@@ -13,6 +13,10 @@ import GoogleMobileAds
 
 enum AdMobConfig {
 
+	// MARK: - Screenshot mode
+	/// ⚠️ App Store 스크린샷용으로 배너를 숨길 때 true. 출시 전 반드시 false 로 복구!
+	static let adsHidden = false
+
 	// MARK: - Banner Ad Unit ID
 
 	/// Google official TEST banner unit — safe to use while developing.

@@ -469,7 +469,7 @@ private extension View {
 	func floatingIcon() -> some View {
 		self
 			.font(.headline)
-			.foregroundColor(Color("AppPurple"))
+			.foregroundColor(.primary)
 			.frame(width: 44, height: 44)
 			.background(.thinMaterial)
 			.clipShape(Circle())

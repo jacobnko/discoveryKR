@@ -5,6 +5,10 @@
 # Personal / non-app files (do NOT commit)
 고인용 증명 Raw.jpg
 
+# App Store screenshots (large; keep only the generator script)
+screenshots/raw/
+screenshots/output/
+
 # Created by https://www.toptal.com/developers/gitignore/api/xcode,cocoapods
 # Edit at https://www.toptal.com/developers/gitignore?templates=xcode,cocoapods
 

@@ -24,12 +24,12 @@ struct SettingView: View {
 						label: SettingLabelView(labelText: "Application", labelImage: "apps.iphone")
 					) {
 						SettingsRowView(name: "Developer", content: "Jacob Taehun Ko")
-						SettingsRowView(name: "Compatibility", content: "iOS16.0")
+						SettingsRowView(name: "Compatibility", content: "iOS 26.0")
+						SettingsRowView(name: "Website", linkLabel: "DiscoverKR", linkDestination: "https://discoverykr.jacobko.app")
 						SettingsRowView(name: "Developer Site", linkLabel: "Jacob's DevLog", linkDestination: "https://jacobko.info")
-						SettingsRowView(name: "Privacy", linkLabel: "Go to Privacy", linkDestination: "https://jacobko.info/awesomeKRPrivacy/")
-						SettingsRowView(name: "Terms & Conditions", linkLabel: "Go to Site", linkDestination: "https://jacobko.info/awesomeKRTermsConditions/")
+						SettingsRowView(name: "Privacy", linkLabel: "Go to Privacy", linkDestination: "https://discoverykr.jacobko.app/privacy")
 						SettingsRowView(name: "Framework", content: "SwiftUI")
-						SettingsRowView(name: "Version", content: "1.1")
+						SettingsRowView(name: "Version", content: "2.0")
 					} //: GROUP
 
 					GroupBox(

@@ -46,7 +46,7 @@ struct SideMenu: View {
 					
 					Spacer()
 					
-					Text("App Version: 1.1\n©Jacob Taehun Ko")
+					Text("App Version: 2.0\n©Jacob Taehun Ko")
 						.font(.footnote)
 						.foregroundColor(.white)
 

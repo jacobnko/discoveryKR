@@ -20,7 +20,7 @@ struct FavoriteButton: View {
 		} label: {
 			Image(systemName: vm.isFavorite(location) ? "heart.fill" : "heart")
 				.font(.headline)
-				.foregroundColor(vm.isFavorite(location) ? .red : Color("AppPurple"))
+				.foregroundColor(.red)
 		}
 		.accessibilityLabel(vm.isFavorite(location) ? "Remove from favorites" : "Add to favorites")
 	}
