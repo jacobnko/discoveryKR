@@ -31,6 +31,7 @@ struct MainView: View {
 		.background(
 			.ultraThickMaterial
 		)
+		.favoriteToast()
 	}
 }
 

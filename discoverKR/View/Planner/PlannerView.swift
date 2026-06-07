@@ -37,6 +37,9 @@ struct PlannerView: View {
 			.sheet(isPresented: $showNewPlan) {
 				NewPlanSheet()
 			}
+			.safeAreaInset(edge: .bottom) {
+				BannerAd(unitID: AdMobConfig.bannerUnitID)
+			}
 		}
 	}
 }

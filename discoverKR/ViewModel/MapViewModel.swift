@@ -58,6 +58,10 @@ class MapViewModel: ObservableObject {
 	@Published var searchText: String = ""
 	@Published var showFavoritesOnly: Bool = false
 
+	// Toast
+	@Published var toast: ToastMessage?
+	private var toastWorkItem: DispatchWorkItem?
+
 	var searchResults: [Location] {
 		guard !searchText.isEmpty else { return [] }
 		return locations.filter {
@@ -76,14 +80,34 @@ class MapViewModel: ObservableObject {
 	}
 
 	func toggleFavorite(_ location: Location) {
+		let willAdd = !favoriteIDs.contains(location.id)
 		withAnimation(.spring()) {
-			if favoriteIDs.contains(location.id) {
-				favoriteIDs.remove(location.id)
-			} else {
+			if willAdd {
 				favoriteIDs.insert(location.id)
+			} else {
+				favoriteIDs.remove(location.id)
 			}
 		}
 		UserDefaults.standard.set(Array(favoriteIDs), forKey: "favoriteLocationIDs")
+
+		showToast(
+			willAdd ? "Added to Favorites" : "Removed from Favorites",
+			systemImage: willAdd ? "heart.fill" : "heart.slash.fill",
+			isAdd: willAdd
+		)
+	}
+
+	// Show an auto-dismissing toast.
+	func showToast(_ text: String, systemImage: String, isAdd: Bool) {
+		toastWorkItem?.cancel()
+		withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) {
+			toast = ToastMessage(text: text, systemImage: systemImage, isAdd: isAdd)
+		}
+		let work = DispatchWorkItem { [weak self] in
+			withAnimation(.easeInOut(duration: 0.3)) { self?.toast = nil }
+		}
+		toastWorkItem = work
+		DispatchQueue.main.asyncAfter(deadline: .now() + 1.6, execute: work)
 	}
 
 	// init

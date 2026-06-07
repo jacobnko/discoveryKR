@@ -17,7 +17,7 @@ struct SplashScreen: View {
                 .ignoresSafeArea()
 
             VStack(spacing: 20) {
-                Image("logoBlack")
+                Image("AppLogo")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 110, height: 110)

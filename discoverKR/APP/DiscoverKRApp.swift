@@ -33,10 +33,12 @@ struct DiscoverKRApp: App {
 						.zIndex(1)
 				}
 			}
-			.task {
-				// ATT 권한 요청은 앱이 active 된 직후에 (init 단계 X)
-				try? await Task.sleep(nanoseconds: 500_000_000) // 0.5s
-				AdMobConfig.requestTrackingAuthorization()
+			.onChange(of: showSplashScreen) { _, isShowing in
+				// 스플래시가 사라지고 메인 화면이 보인 뒤 ATT 권한 요청 (검은 배경 위 X)
+				guard !isShowing else { return }
+				DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+					AdMobConfig.requestTrackingAuthorization()
+				}
 			}
 		}
 	}

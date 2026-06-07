@@ -22,7 +22,7 @@ struct AboutView: View {
 		NavigationStack {
 			ScrollView(.vertical, showsIndicators: false) {
 				VStack(spacing: 40) {
-					ForEach(links, id: \.url) { item in
+					ForEach(Array(links.enumerated()), id: \.element.url) { index, item in
 						NavigationLink(destination:
 							WebViewTemplate(urlToLoad: item.url)
 								.ignoresSafeArea(edges: .bottom)
@@ -33,6 +33,11 @@ struct AboutView: View {
 								.frame(width: getReact().width * 0.9)
 								.cornerRadius(20)
 								.shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3)
+						}
+
+						// 카드 중간에 배너 삽입 (3번째 카드 뒤)
+						if index == 2 {
+							BannerAd(unitID: AdMobConfig.bannerUnitID)
 						}
 					}
 

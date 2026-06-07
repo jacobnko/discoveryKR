@@ -48,6 +48,7 @@
 		EE000010EE000010EE000010 /* AddToPlanSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE000009EE000009EE000009 /* AddToPlanSheet.swift */; };
 		EE000012EE000012EE000012 /* NewPlanSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE000011EE000011EE000011 /* NewPlanSheet.swift */; };
 		FF000002FF000002FF000002 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF000001FF000001FF000001 /* FavoriteButton.swift */; };
+		LL000001LL000001LL000001 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = LL000002LL000002LL000002 /* ToastView.swift */; };
 		HH000001HH000001HH000001 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = HH000002HH000002HH000002 /* RemoteImage.swift */; };
 		JJ000001JJ000001JJ000001 /* LocationAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = JJ000002JJ000002JJ000002 /* LocationAI.swift */; };
 		FF000004FF000004FF000004 /* LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF000003FF000003FF000003 /* LoadImage.swift */; };
@@ -101,6 +102,7 @@
 		EE000009EE000009EE000009 /* AddToPlanSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToPlanSheet.swift; sourceTree = "<group>"; };
 		EE000011EE000011EE000011 /* NewPlanSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlanSheet.swift; sourceTree = "<group>"; };
 		FF000001FF000001FF000001 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		LL000002LL000002LL000002 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		HH000002HH000002HH000002 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		JJ000002JJ000002JJ000002 /* LocationAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAI.swift; sourceTree = "<group>"; };
 		FF000003FF000003FF000003 /* LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImage.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				81DFD5DC27CEFB02004B503E /* InsetDontMissView.swift */,
 				AA000001AA000001AA000001 /* ShimmerView.swift */,
 				FF000001FF000001FF000001 /* FavoriteButton.swift */,
+				LL000002LL000002LL000002 /* ToastView.swift */,
 				HH000002HH000002HH000002 /* RemoteImage.swift */,
 				FF000003FF000003FF000003 /* LoadImage.swift */,
 				FF000007FF000007FF000007 /* InsetDontMiss.swift */,
@@ -485,6 +488,7 @@
 				81DFD5D927CEF8D3004B503E /* HeadingView.swift in Sources */,
 				AA000001AA000002AA000002 /* ShimmerView.swift in Sources */,
 				FF000002FF000002FF000002 /* FavoriteButton.swift in Sources */,
+				LL000001LL000001LL000001 /* ToastView.swift in Sources */,
 				HH000001HH000001HH000001 /* RemoteImage.swift in Sources */,
 				JJ000001JJ000001JJ000001 /* LocationAI.swift in Sources */,
 				FF000004FF000004FF000004 /* LoadImage.swift in Sources */,
