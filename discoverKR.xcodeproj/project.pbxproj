@@ -16,7 +16,6 @@
 		815CC42527CC816400404AA5 /* SettingLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815CC42427CC816400404AA5 /* SettingLabelView.swift */; };
 		815CC42727CC817E00404AA5 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815CC42627CC817E00404AA5 /* SettingsRowView.swift */; };
 		815CC42B27CC822700404AA5 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815CC42A27CC822700404AA5 /* SplashScreen.swift */; };
-		II000001II000001II000001 /* AppLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = II000002II000002II000002 /* AppLoadingState.swift */; };
 		81AD113127E0CAC00093F8ED /* WebViewTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AD113027E0CAC00093F8ED /* WebViewTemplate.swift */; };
 		81C8672B27CDD8C400348B80 /* MapPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C8672A27CDD8C400348B80 /* MapPreviewView.swift */; };
 		81C8672F27CDF6C100348B80 /* TabViewColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C8672E27CDF6C100348B80 /* TabViewColor.swift */; };
@@ -31,7 +30,6 @@
 		81DFDDBB27CF7600007A9552 /* MoreDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFDDBA27CF7600007A9552 /* MoreDetailView.swift */; };
 		81E491C627CC8475000040AF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E491C527CC8475000040AF /* MainView.swift */; };
 		81E491C827CC84C0000040AF /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E491C727CC84C0000040AF /* BannerAd.swift */; };
-		KK000001KK000001KK000001 /* AdMobConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = KK000002KK000002KK000002 /* AdMobConfig.swift */; };
 		81E491CA27CC856D000040AF /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E491C927CC856D000040AF /* MapView.swift */; };
 		81E491CC27CC857B000040AF /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E491CB27CC857B000040AF /* AboutView.swift */; };
 		81E491CE27CC85C8000040AF /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E491CD27CC85C8000040AF /* SettingView.swift */; };
@@ -48,12 +46,14 @@
 		EE000010EE000010EE000010 /* AddToPlanSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE000009EE000009EE000009 /* AddToPlanSheet.swift */; };
 		EE000012EE000012EE000012 /* NewPlanSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE000011EE000011EE000011 /* NewPlanSheet.swift */; };
 		FF000002FF000002FF000002 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF000001FF000001FF000001 /* FavoriteButton.swift */; };
-		LL000001LL000001LL000001 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = LL000002LL000002LL000002 /* ToastView.swift */; };
-		HH000001HH000001HH000001 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = HH000002HH000002HH000002 /* RemoteImage.swift */; };
-		JJ000001JJ000001JJ000001 /* LocationAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = JJ000002JJ000002JJ000002 /* LocationAI.swift */; };
 		FF000004FF000004FF000004 /* LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF000003FF000003FF000003 /* LoadImage.swift */; };
 		FF000006FF000006FF000006 /* MoreDetailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF000005FF000005FF000005 /* MoreDetailImage.swift */; };
 		FF000008FF000008FF000008 /* InsetDontMiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF000007FF000007FF000007 /* InsetDontMiss.swift */; };
+		HH000001HH000001HH000001 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = HH000002HH000002HH000002 /* RemoteImage.swift */; };
+		II000001II000001II000001 /* AppLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = II000002II000002II000002 /* AppLoadingState.swift */; };
+		JJ000001JJ000001JJ000001 /* LocationAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = JJ000002JJ000002JJ000002 /* LocationAI.swift */; };
+		KK000001KK000001KK000001 /* AdMobConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = KK000002KK000002KK000002 /* AdMobConfig.swift */; };
+		LL000001LL000001LL000001 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = LL000002LL000002LL000002 /* ToastView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,7 +66,6 @@
 		815CC42427CC816400404AA5 /* SettingLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingLabelView.swift; sourceTree = "<group>"; };
 		815CC42627CC817E00404AA5 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 		815CC42A27CC822700404AA5 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
-		II000002II000002II000002 /* AppLoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoadingState.swift; sourceTree = "<group>"; };
 		81AD113027E0CAC00093F8ED /* WebViewTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewTemplate.swift; sourceTree = "<group>"; };
 		81C8672A27CDD8C400348B80 /* MapPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPreviewView.swift; sourceTree = "<group>"; };
 		81C8672E27CDF6C100348B80 /* TabViewColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewColor.swift; sourceTree = "<group>"; };
@@ -81,7 +80,6 @@
 		81DFDDBA27CF7600007A9552 /* MoreDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDetailView.swift; sourceTree = "<group>"; };
 		81E491C527CC8475000040AF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		81E491C727CC84C0000040AF /* BannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
-		KK000002KK000002KK000002 /* AdMobConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobConfig.swift; sourceTree = "<group>"; };
 		81E491C927CC856D000040AF /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		81E491CB27CC857B000040AF /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		81E491CD27CC85C8000040AF /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
@@ -102,12 +100,14 @@
 		EE000009EE000009EE000009 /* AddToPlanSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToPlanSheet.swift; sourceTree = "<group>"; };
 		EE000011EE000011EE000011 /* NewPlanSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlanSheet.swift; sourceTree = "<group>"; };
 		FF000001FF000001FF000001 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
-		LL000002LL000002LL000002 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
-		HH000002HH000002HH000002 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
-		JJ000002JJ000002JJ000002 /* LocationAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAI.swift; sourceTree = "<group>"; };
 		FF000003FF000003FF000003 /* LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImage.swift; sourceTree = "<group>"; };
 		FF000005FF000005FF000005 /* MoreDetailImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDetailImage.swift; sourceTree = "<group>"; };
 		FF000007FF000007FF000007 /* InsetDontMiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetDontMiss.swift; sourceTree = "<group>"; };
+		HH000002HH000002HH000002 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		II000002II000002II000002 /* AppLoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoadingState.swift; sourceTree = "<group>"; };
+		JJ000002JJ000002JJ000002 /* LocationAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAI.swift; sourceTree = "<group>"; };
+		KK000002KK000002KK000002 /* AdMobConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobConfig.swift; sourceTree = "<group>"; };
+		LL000002LL000002LL000002 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,14 +202,6 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		JJ000003JJ000003JJ000003 /* AI */ = {
-			isa = PBXGroup;
-			children = (
-				JJ000002JJ000002JJ000002 /* LocationAI.swift */,
-			);
-			path = AI;
-			sourceTree = "<group>";
-		};
 		815CC41C27CC800D00404AA5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,7 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				815CC42227CC80E600404AA5 /* CodableBundleExtension.swift */,
-					81E491C727CC84C0000040AF /* BannerAd.swift */,
+				81E491C727CC84C0000040AF /* BannerAd.swift */,
 				KK000002KK000002KK000002 /* AdMobConfig.swift */,
 				81C8672E27CDF6C100348B80 /* TabViewColor.swift */,
 				81D9DB5527D9D9CD0085CCA5 /* OffsetModifier.swift */,
@@ -339,6 +331,14 @@
 			path = Planner;
 			sourceTree = "<group>";
 		};
+		JJ000003JJ000003JJ000003 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				JJ000002JJ000002JJ000002 /* LocationAI.swift */,
+			);
+			path = AI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -350,7 +350,7 @@
 				815CC40527CC7FB300404AA5 /* Sources */,
 				815CC40627CC7FB300404AA5 /* Frameworks */,
 				815CC40727CC7FB300404AA5 /* Resources */,
-				4869309918BC9984E6E586AC /* [CP] Embed Pods Frameworks */,
+				B7A18B1C503DCBB0E66CA322 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -432,25 +432,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4869309918BC9984E6E586AC /* [CP] Embed Pods Frameworks */ = {
+		B7A18B1C503DCBB0E66CA322 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-discoverKR/Pods-discoverKR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-discoverKR/Pods-discoverKR-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-discoverKR/Pods-discoverKR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-discoverKR/Pods-discoverKR-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-discoverKR/Pods-discoverKR-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-discoverKR/Pods-discoverKR-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -638,7 +634,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"discoverKR/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -674,7 +670,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"discoverKR/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

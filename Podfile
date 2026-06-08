@@ -6,7 +6,9 @@ target 'discoverKR' do
   # Suppress all third-party pod warnings (nanopb, GoogleUtilities, PromisesObjC etc.)
   inhibit_all_warnings!
 
-  pod 'Google-Mobile-Ads-SDK'
+  # v11.x: includes Apple privacy manifests + keeps GAD* API (no code changes).
+  # (v12+ renamed the API and would break BannerAd.swift.)
+  pod 'Google-Mobile-Ads-SDK', '~> 11.0'
   # Pods for discoverKR
 
 end
